@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="container">
+        <header>
+            <h1>💰 My Wallet</h1>
+            <div class="summary-card">
+                <span>Total Spent</span>
+                <div class="total-value">₹<span id="total-amount">0.00</span></div>
+            </div>
+        </header>
+
+        <div class="chart-container">
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+        <form id="expense-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input id="title" type="text" required placeholder="e.g. Groceries" />
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount (₹)</label>
+              <input id="amount" type="number" step="0.01" required placeholder="0.00"/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" required>
+                  <option value="Food">🍔 Food</option>
+                  <option value="Transport">🚗 Transport</option>
+                  <option value="Utilities">💡 Utilities</option>
+                  <option value="Entertainment">🎬 Entertainment</option>
+                  <option value="Health">💊 Health</option>
+                  <option value="Other">📝 Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input id="date" type="date" required />
+            </div>
+          </div>
+
+          <button type="submit" id="add-btn">Add Expense</button>
+        </form>
+
+        <div class="list-header">
+            <h2>Recent Transactions</h2>
+        </div>
+
+        <div id="empty-state" class="hidden">
+            <p>No expenses yet. Add one above!</p>
+        </div>
+
+        <div class="table-responsive">
+            <table id="expense-table">
+            <thead>
+                <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expense-tbody"></tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+    
+    <div id="toast" class="toast">Action Successful</div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
