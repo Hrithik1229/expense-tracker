@@ -23,18 +23,18 @@ Built using:
 
 ## Project Structure
 
-EXPENSE_TRACKER
-├── backend
-│ ├── index.js
-│ ├── package.json
-│ ├── package-lock.json
-│ ├── .env (ignored)
-│ └── node_modules (ignored)
+EXPENSE_TRACKER/
+├── backend/
+│   ├── index.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── .env (ignored)
+│   └── node_modules/ (ignored)
 │
-├── frontend
-│ ├── index.html
-│ ├── style.css
-│ └── app.js
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
 │
 ├── .gitignore
 └── README.md
