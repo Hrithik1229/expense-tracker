@@ -23,6 +23,7 @@ Built using:
 
 ## Project Structure
 
+```
 EXPENSE_TRACKER/
 ├── backend/
 │   ├── index.js
@@ -38,3 +39,4 @@ EXPENSE_TRACKER/
 │
 ├── .gitignore
 └── README.md
+```
