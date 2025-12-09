@@ -37,9 +37,9 @@ EXPENSE_TRACKER/
 │   ├── style.css
 │   └── app.js
 │
-├── Schema.sql
 ├── .gitignore
-└── README.md
+├── README.md
+└── Schema.sql
 ```
 The database schema is provided in `Schema.sql`.  
 Run this file in MySQL before starting the backend server.
